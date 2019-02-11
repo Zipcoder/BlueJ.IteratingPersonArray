@@ -1,4 +1,4 @@
-package com.zipcodewilmington;
+ 
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -31,8 +31,11 @@ public class PersonHandlerTest {
     @Test
     public void testWhileLoop() {
         // : When
+        System.out.print('\u000C');
         String actual = personHandler.whileLoop();
-
+        System.out.println("----- EXPECTED -----");
+        System.out.println(expected);
+        
         // : Then
         Assert.assertEquals(expected, actual);
     }
