@@ -1,5 +1,5 @@
-package com.zipcodewilmington;
-
+ 
+import java.util.*;
 /**
  * Created by leon on 1/24/18.
  */
@@ -11,17 +11,14 @@ public class PersonHandler {
     }
 
     public String whileLoop() {
-        String result = "";
-        // assume there is a `counter`
-        // while `counter` is less than length of array
-            // begin loop
-
-                // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
-
-            // end loop
-        return result;
+        StringBuilder result = new StringBuilder();
+        Integer counter = 0;
+        Integer lengthArr =  this.getPersonArray().length;
+        while( counter < lengthArr ){
+            result.append(this.getPersonArray()[counter]);
+            counter++;
+        }
+        return result.toString();
     }
 
 
@@ -38,7 +35,10 @@ public class PersonHandler {
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
             // end loop
-
+        Integer lengthArr =  this.getPersonArray().length;
+        for( int i = 0; i < lengthArr; i++ ){
+            result += this.getPersonArray()[i];
+        }
         return result;
     }
 
@@ -54,7 +54,9 @@ public class PersonHandler {
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
             // end loop
-
+        for( Person s : this.getPersonArray() ){
+            result += s;
+        }
         return result;
     }
 
