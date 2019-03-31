@@ -11,14 +11,14 @@ public class PersonHandler {
     }
 
     public String whileLoop() {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         Integer counter = 0;
         Integer lengthArr =  this.getPersonArray().length;
         while( counter < lengthArr ){
-            result += this.getPersonArray()[counter];
+            result.append(this.getPersonArray()[counter]);
             counter++;
         }
-        return result;
+        return result.toString();
     }
 
 
